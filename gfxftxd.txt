@@ -1,0 +1,30 @@
+/*********************************************************************
+* Module Name         : Registration
+* Input Parameters    : username
+* Return Type            : void
+* Author                     : EMS_GROUP 5
+* Creation Date          : 06-04-2017
+* Description             : Registration of Customer
+ *********************************************************************/
+
+SUB Registration (string username, string password, string confirmPassword, string userType)
+	DECLARE username, password, confirmPassword, userType As STRING
+	ENTER username
+	ACCEPT username
+	
+	ENTER password
+	ACCEPT password
+
+	ENTER confirmPassword
+	Accept confirmPassword
+	
+		IF (password == confirmPassword)
+			IF (userType=="Employer" OR userType=="Admin") 
+				PRINT "Employer Registered Successfully"
+		
+		ELSE
+			"Both the passwords should match"
+		END IF
+END SUB 
+
+
